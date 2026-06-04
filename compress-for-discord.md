@@ -4,6 +4,34 @@ A beginner-friendly guide for getting a large `.mov` screen recording (music vid
 
 ---
 
+## Quick Option: iMovie (No Terminal Required)
+
+If you just need a smaller file and don't want to install anything, iMovie is free on both iPhone and Mac and handles most cases well.
+
+### On iPhone
+1. Open **iMovie** → tap `+` → **Movie**
+2. Import your screen recording
+3. Trim the clip if possible (shorter = smaller file)
+4. Tap the **Share** icon → **Save Video**
+5. Choose **360p** or **540p** — for a music video, 540p is a reasonable quality floor
+
+### On Mac
+1. Open **iMovie** → create a new project → import your `.mov`
+2. Drag it to the timeline
+3. **File → Share → File…**
+4. Set **Resolution** to 720p (or 480p for longer clips) and **Quality** to Medium or Low
+5. Click **Next**, save, check the file size
+
+**Limitation:** iMovie doesn't let you set a precise file size target. If your clip is over ~3 minutes, you'll likely need to either trim it or use the ffmpeg two-pass method below to reliably land under 8 MB.
+
+---
+
+## FFmpeg (Full Control)
+
+For precise file size targeting, better codec efficiency, and audio quality control, use ffmpeg. It runs on the command line — the sections below walk through it step by step.
+
+---
+
 ## Prerequisites
 
 ### Install FFmpeg
